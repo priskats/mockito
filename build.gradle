@@ -5,6 +5,17 @@ buildscript {
         gradlePluginPortal()
     }
 
+    plugins {
+  id "org.sonarqube" version "4.2.1.3168"
+}
+
+sonar {
+  properties {
+    property "sonar.projectKey", "mockito"
+    property "sonar.projectName", "mockito"
+  }
+}
+
     dependencies {
         classpath 'gradle.plugin.com.hierynomus.gradle.plugins:license-gradle-plugin:0.16.1'
         classpath 'net.ltgt.gradle:gradle-errorprone-plugin:3.1.0'
